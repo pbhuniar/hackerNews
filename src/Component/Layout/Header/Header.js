@@ -6,13 +6,14 @@ export default function Header() {
     return (
         <div>
             
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark" >
     <Container>
-    <Navbar.Brand href="#home">HackerNews2.0</Navbar.Brand>
-    <Nav className="me-auto">
+    <Navbar.Brand as={Link} to="/Home">HackerNews2.0</Navbar.Brand>
+    <Nav className="ms-auto">
+    <Nav.Link  as={Link} to="/Home"> Home</Nav.Link>
     <Nav.Link  as={Link} to="/LogIn"> LogIn</Nav.Link>
     <Nav.Link  as={Link} to="/Registration"> Registration</Nav.Link>
-    
+
       <Nav.Link href="#features">Features</Nav.Link>
       <Nav.Link href="#pricing">Pricing</Nav.Link>
     </Nav>
