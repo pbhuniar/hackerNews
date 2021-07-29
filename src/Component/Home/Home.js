@@ -9,17 +9,31 @@ export default function Home() {
     let [hackerNewsID,setHackerNewsData]=useState({
         data: []
      })
+     let [hackerNewsDATA,setHackerNewsDataDATA]=useState({
+        UserData: []
+     })
+
+
      
      useEffect(()=>{
          axios.get(`https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty`).
          then(res=>{
             console.log(res.data);
             setHackerNewsData({data:res.data})
-         console.log(hackerNewsID);
+               
+            hackerNewsID.data.map(e=>{
+                axios.get(`https://hacker-news.firebaseio.com/v0/item/${e}.json?print=pretty`).then(res=>{
+                    console.log(res.data)
+                setHackerNewsDataDATA({UserData:res.data})
+                    console.log(hackerNewsDATA);
+            }).
+                catch(err=>console.log(err))
+            })
+
 
 
          }).catch(err=>{console.log(err);})
-    },[setHackerNewsData])
+    })
  
     
    
@@ -28,13 +42,13 @@ export default function Home() {
             THis is Home !
 
  
-{hackerNewsID.data.map(e=>{
+{/* {hackerNewsDATA.data.map(e=>(
 
     <li>
         <ul>{e}</ul>
     </li>
 
-})}
+    ))} */}
 
         </div>
     )
