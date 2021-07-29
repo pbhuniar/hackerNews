@@ -42,13 +42,13 @@ export default function Home() {
             THis is Home !
 
  
-{/* {hackerNewsDATA.data.map(e=>(
+ {/* {hackerNewsDATA.data.map(e=>(
 
     <li>
         <ul>{e}</ul>
     </li>
 
-    ))} */}
+    ))}  */}
 
         </div>
     )

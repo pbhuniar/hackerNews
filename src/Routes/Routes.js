@@ -14,13 +14,14 @@ export default function Routes() {
         <div>
                 <Router>
                         <Header/>
+                     
                         <Switch>    
                                     <Route path="/Home" component={Home}></Route>
                                     <Route path="/LogIn" component={Login}></Route>
                                     <Route path="/Registration" component={Registration}></Route>
-
+                                    
                         </Switch>
-
+                        <Footer/>
                 </Router>
         </div>
     )
