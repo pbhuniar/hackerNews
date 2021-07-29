@@ -11,7 +11,7 @@ import Footer from '../Component/Layout/Footer/Footer'
 export default function Route() {
     return (
         <div>
-            
+      
         </div>
     )
 }

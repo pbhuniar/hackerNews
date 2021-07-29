@@ -3,11 +3,11 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route,Switch,Redirect,BrowserRouter as Router} from 'react-router-dom'
 
-import Route from './Routes/Route';
+import Routes from './Routes/Routes';
 function App() {
   return (
     <div className="App">
-        <Route/> 
+        <Routes/> 
     </div>
   );
 }
